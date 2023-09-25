@@ -83,7 +83,7 @@
     </div>
 
 
-    <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
+    <button onclick="topFunction()" id="topBtn" >Top</button>
     <script>
         let mybutton = document.getElementById("topBtn");
         window.onscroll = function () { scrollFunction() };
@@ -94,9 +94,28 @@
                 mybutton.style.display = "none";
             }
         }
+
+        // 點擊畫面停止滾動
+        let isScrolling = false;
+        document.addEventListener('click', function () {
+            if (isScrolling) {
+                isScrolling = false;
+            } else {
+                isScrolling = true;
+                scrollFunction();
+            }
+        });
+
         function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
+            const scrollStep = -5;
+            const scrollInterval = 10;
+            const timer = setInterval(function () {
+                if (!isScrolling || (document.body.scrollTop === 0 && document.documentElement.scrollTop === 0)) {
+                    clearInterval(timer);
+                } else {
+                    window.scrollBy(0, scrollStep);
+                }
+            }, scrollInterval);
         }
     </script>
 </body>
