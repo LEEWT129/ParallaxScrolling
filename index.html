@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js"></script>
+</head>
+
+<body>
+
+    <div class="parallax1">
+        <div class="title">
+            <h3>大雪星空
+                <p>臺中-東勢</p>
+            </h3>
+        </div>
+    </div>
+    <div class="content">
+        夜景星空
+    </div>
+    <div class="parallax2">
+        <div class="title">
+            <h3>大雪星空
+                <p>臺中-東勢</p>
+            </h3>
+        </div>
+    </div>
+    <div class="content">
+        地址： 423021臺中市東勢區東坑路795巷18號
+    </div>
+    <div class="parallax3">
+        <div class="title">
+            <h3>龍過脈森林步道
+                <p>雲林-林內</p>
+            </h3>
+        </div>
+    </div>
+    <div class="content">
+        地址： 643雲林縣林內鄉
+    </div>
+    <div class="parallax4">
+        <div class="title">
+            <h3>硫磺谷遊憩區
+                <p>臺北-北投</p>
+            </h3>
+        </div>
+    </div>
+    <div class="content">
+        地址： 112臺北市北投區泉源路
+    </div>
+    <div class="parallax5">
+        <div class="title">
+            <h3>擎天崗大草原
+                <p>臺北-士林</p>
+            </h3>
+        </div>
+    </div>
+    <div class="content">
+        地址： 111臺北市士林區菁山路101巷246號
+    </div>
+    <div class="parallax6">
+        <div class="title">
+            <h3>望高寮夜景公園
+                <p>臺中-南屯</p>
+            </h3>
+        </div>
+    </div>
+    <div class="content">
+        地址： 408臺中市南屯區中台路601號
+    </div>
+    <div class="parallax7">
+        <div class="title">
+            <h3>南寮漁港
+                <p>新竹-南寮</p>
+            </h3>
+        </div>
+    </div>
+    <div class="content">
+        位置： 新竹市北區
+    </div>
+
+
+    <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
+    <script>
+        let mybutton = document.getElementById("topBtn");
+        window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+
+</html>
